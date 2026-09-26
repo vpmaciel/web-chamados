@@ -1,0 +1,91 @@
+* {
+    font-family: 'Open Sans', sans-serif;    
+}
+
+body {
+    margin: 0;
+    padding-top: 20px; /* Distância opcional do topo da tela */
+    background-color: #fff;
+}
+
+a, 
+a:hover, 
+a:visited, 
+a:active,
+table a,
+button a {
+    text-decoration: none !important;
+    color: #000;
+}
+
+/* Centraliza a tabela horizontalmente */
+table {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto; /* <--- Alinha no centro horizontalmente */
+}
+
+table > thead > tr {
+    background: whitesmoke;
+}
+
+table td, table th {
+    padding: 5px;
+}
+
+table tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+/* Para alinhar o botão ao centro junto com a tabela */
+button {
+    display: block; /* Permite o uso de margin auto */
+    margin: 10px auto 0 auto; /* <--- Centraliza o botão */
+    background: white;
+    border: 1px solid #888;
+    padding: 4px 12px;
+    cursor: pointer;    
+}
+
+/* Centraliza o formulário horizontalmente na tela */
+
+menu {
+    background-color: aqua;
+    width: 80%;
+    max-width: 600px; /* Limite para não esticar demais em telas grandes */
+}
+
+form {
+    display: block;
+    border: 1px hidden #888;
+    width: 80%;
+    max-width: 600px; /* Limite para não esticar demais em telas grandes */
+    margin: 0 auto; /* Centralização horizontal */
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* Rótulos em linha própria, logo acima do input */
+form > label {
+    display: block;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 12px; /* Espaço em relação ao campo anterior */
+    margin-bottom: 4px; /* Aproxima o label do seu input */
+    height: 20px;
+}
+
+form > input, 
+form > select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+}

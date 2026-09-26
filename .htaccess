@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Área Restrita"
+AuthUserFile "C:/xampp/htdocs/web-chamados/config/.htpasswd"
+Require valid-user
+

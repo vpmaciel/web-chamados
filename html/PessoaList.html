@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Listagem de pessoas </title>
+        <link href="css/list.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="html/Menu.js"></script>
+    </head>
+    <body>
+        <div id="menu" class="menu"></div>
+        <form enctype="multipart/form-data" method="post" action="index.php?class=PessoaList">
+            <h3>Pessoa</h3>
+            <hr>
+            <label for="campo">Pesquisar por:</label>
+            <select id="campo" name="campo" style="width:100%">
+                <option value="id">Código (ID)</option>
+                <option value="nome">Nome</option>
+                <option value="endereco">Endereço</option>
+                <option value="bairro">Bairro</option>
+                <option value="telefone">Telefone</option>
+                <option value="email">Email</option>
+            </select>
+            <label for="valor">Termo da busca:</label>
+            <input type="text" id="valor" name="valor" placeholder="Digite o que deseja pesquisar..." style="width:100%">            
+            <label for="valor">&nbsp;</label>
+            <input type="submit" value="Pesquisar">            
+
+        </form>
+        <br>
+        <table border=1>
+        <thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Id</td>
+                <td>Nome</td>
+                <td>Endereço</td>
+                <td>Bairro</td>
+                <td>Telefone</td>
+            </tr>
+        </thead>
+        <tbody>
+        
+        {items}
+        
+        </tbody>
+        </table>        
+        <button onclick="window.location='index.php?class=PessoaForm'">
+            <img src="images/insert.svg" style="width:17px"> Inserir
+        </button>
+    </body>
+</html>

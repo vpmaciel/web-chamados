@@ -1,0 +1,67 @@
+* {
+    font-family: 'Open Sans', sans-serif;    
+}
+
+/* Garante que o body ocupe a largura da tela sem rolagens indesejadas */
+body {
+    margin: 0;
+    padding-top: 20px; /* Distância opcional do topo da tela */
+    background-color: #fff;
+}
+
+input[readonly="1"] {
+    background: #e0e0e0;
+    border: 1px solid #b0b0b0;
+}
+
+/* Centraliza o formulário horizontalmente na tela */
+menu {
+    background-color: aqua;
+    width: 80%;
+    max-width: 600px; /* Limite para não esticar demais em telas grandes */
+}
+
+form {
+    display: block;
+    border: 1px hidden #888;
+    width: 80%;
+    max-width: 600px; /* Limite para não esticar demais em telas grandes */
+    margin: 0 auto; /* Centralização horizontal */
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* Rótulos em linha própria, logo acima do input */
+form > label {
+    display: block;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 12px; /* Espaço em relação ao campo anterior */
+    margin-bottom: 4px; /* Aproxima o label do seu input */
+    height: 20px;
+}
+
+/* Inputs e Selects ocupando a linha completa */
+form > input, 
+form > select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+}
+
+/* Botão de envio alinhado no início */
+form > input[type="submit"] {
+    width: 100px;    
+    margin-top: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    height: 40px;
+}
+
