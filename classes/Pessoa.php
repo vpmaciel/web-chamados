@@ -46,6 +46,12 @@ class Pessoa
             $termoBusca = '%' . strtoupper($valor) . '%';
             $stmt->execute([':valor' => $termoBusca]);
         }
+
+        if ($stmt->rowCount() > 0) {
+            print("<script>alert('Registro(s) encontrado !');</script>");
+        } else {
+            print("<script>alert('Registro não encontrado !');</script>");
+        }
         
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -65,6 +71,8 @@ class Pessoa
         
         $result = $conn->prepare("DELETE FROM pessoa WHERE id=:id");
         $result->execute( [ ':id' => $id ]);
+
+        print("<script>alert('Registro excluído com sucesso !');</script>");
     }
     
     public static function all()
@@ -109,6 +117,7 @@ class Pessoa
                             ':telefone'   => $pessoa['telefone'],
                             ':email'   => $pessoa['email'],
                             ':id_cidade'   => $pessoa['id_cidade']
-                         ]);
+                         ]);        
+        print("<script>alert('Registro salvo com sucesso !');window.location.href = 'index.php?class=PessoaList';</script>");
     }
 }

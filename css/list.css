@@ -62,7 +62,7 @@ form {
     width: 80%;
     max-width: 600px; /* Limite para não esticar demais em telas grandes */
     margin: 0 auto; /* Centralização horizontal */
-    padding: 20px;
+    padding: 0px;
     background-color: #fff;
     box-sizing: border-box;
 }

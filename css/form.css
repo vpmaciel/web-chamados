@@ -14,12 +14,6 @@ input[readonly="1"] {
     border: 1px solid #b0b0b0;
 }
 
-/* Centraliza o formulário horizontalmente na tela */
-menu {
-    background-color: aqua;
-    width: 80%;
-    max-width: 600px; /* Limite para não esticar demais em telas grandes */
-}
 
 form {
     display: block;
@@ -27,7 +21,7 @@ form {
     width: 80%;
     max-width: 600px; /* Limite para não esticar demais em telas grandes */
     margin: 0 auto; /* Centralização horizontal */
-    padding: 20px;
+    padding: 0px;
     background-color: #fff;
     box-sizing: border-box;
 }
@@ -58,10 +52,9 @@ form > select {
 
 /* Botão de envio alinhado no início */
 form > input[type="submit"] {
-    width: 100px;    
+    width: 100%;    
     margin-top: 20px;
     padding: 8px 16px;
     cursor: pointer;
     height: 40px;
 }
-

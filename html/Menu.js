@@ -1,31 +1,31 @@
-// menu.js
+document.addEventListener("DOMContentLoaded", function() {
+    var conteudoSelect1 = `<select name="menu_navegacao" style="width: 280px; height: 42px; padding: 0 12px; border-radius: 8px; border: 1px solid #cbd5e1; background-color: #ffffff; cursor: pointer; font-size: 14px; color: #334155; outline: none;" onchange="navegarParaPagina(this.value)">
+    <option value="">-- Módulo Principal --</option>
+    <option value="index.php?class=PessoaForm">Home</option>
+    <option value="index.php?class=PessoaList">Pessoas</option>
+    <option value="index.php?class=CidadesList">Cidades</option>
+</select>`;
+    var conteudoSelect2 = `<select name="menu_navegacao2" style="width: 280px; height: 42px; padding: 0 12px; border-radius: 8px; border: 1px solid #cbd5e1; background-color: #ffffff; cursor: pointer; font-size: 14px; color: #334155; outline: none;" onchange="navegarParaPagina(this.value)">
+    <option value="">-- Ações Rápidas --</option>
+    <option value="index.php?class=RelatorioForm">Relatórios</option>
+    <option value="index.php?class=ConfigForm">Configurações</option>
+    <option value="index.php?class=Sair">Sair</option>
+</select>`;
 
-// Aguarda o navegador carregar todo o HTML antes de executar
-document.addEventListener("DOMContentLoaded", function() {    
-    
-    // Cria o HTML do select
-    var conteudoSelect = `
-        <select name="menu_navegacao" style="width: 300px; height: 40px; display: block; margin: 0 auto;" onchange="navegarParaPagina(this.value)">
-        <option value="">-- Selecione para onde deseja ir --</option>
-        <option value="index.php?class=PessoaForm">Home</option>
-        <option value="">------</option>
-        <option value="index.php?class=PessoaForm">Sair</option>
-        <option value="">------</option>
-        <option value="index.php?class=PessoaList">Pessoa</option>
-        <option value="index.php?class=PessoaForm">Cidades</option>
-        </select>
-    `;
-
-    // Substitui o conteúdo da div #menu a cada carregamento
     var elementoMenu = document.getElementById('menu');
     if (elementoMenu) {
-        elementoMenu.innerHTML = conteudoSelect;
+        // Unifica os dois selects
+        elementoMenu.innerHTML = conteudoSelect1 + conteudoSelect2;
+
+        // Estilos para centralizar horizontalmente com espaçamento
+        elementoMenu.style.display = 'flex';
+        elementoMenu.style.justifyContent = 'center';
+        elementoMenu.style.alignItems = 'center';
+        elementoMenu.style.gap = '20px';
+        elementoMenu.style.flexWrap = 'wrap';
     }
 });
 
-// Função global para fazer a navegação
 function navegarParaPagina(url) {
-    if (url) {
-        window.location.href = url;
-    }
+    if (url) window.location.href = url;
 }

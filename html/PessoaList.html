@@ -2,7 +2,9 @@
     <head>
         <meta charset="utf-8">
         <title> Listagem de pessoas </title>
+        <link rel="icon" type="image/png" href="../favicon.png">    
         <link href="css/list.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/estilo.css" rel="stylesheet" type="text/css" media="screen" />
         <script src="html/Menu.js"></script>
     </head>
     <body>
@@ -24,7 +26,10 @@
             <label for="valor">&nbsp;</label>
             <input type="submit" value="Pesquisar">            
 
-        </form>
+        </form>        
+        <button onclick="window.location='index.php?class=PessoaForm'">
+            <img src="images/insert.svg" style="width:17px"> Inserir
+        </button>
         <br>
         <table border=1>
         <thead>
@@ -44,8 +49,6 @@
         
         </tbody>
         </table>        
-        <button onclick="window.location='index.php?class=PessoaForm'">
-            <img src="images/insert.svg" style="width:17px"> Inserir
-        </button>
+        <br>
     </body>
 </html>
