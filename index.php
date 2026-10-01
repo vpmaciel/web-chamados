@@ -18,4 +18,7 @@ if (class_exists($classe))
         $pagina->$metodo( $_REQUEST );
     }
     $pagina->show();
+} else {    
+    $pagina = new PessoaList;# code...
+    $pagina->show();
 }

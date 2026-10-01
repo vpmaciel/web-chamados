@@ -33,7 +33,7 @@ class PessoaList
          
             if(isset($valor) && strlen($valor) > 0)
             {
-                $pessoas = Pessoa::search($campo, $valor);    
+                $pessoas = Pessoa::search($campo, $valor);                    
 
                 $items = '';
                 foreach ($pessoas as $pessoa)
@@ -48,6 +48,8 @@ class PessoaList
                     $items .= $item;
                 }                
                 $this->html = str_replace('{items}', $items, $this->html);
+            }  else if(isset($campo)) {
+                print("<script>alert('Digite um termo para pesquisar !');</script>");
             }
 
             $items = '';

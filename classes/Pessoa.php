@@ -28,13 +28,15 @@ class Pessoa
         // Lista de colunas permitidas
         $colunasPermitidas = ['id', 'nome', 'endereco', 'bairro', 'telefone', 'email', 'cidade'];
 
-        // Valida a coluna
+        $colunasCampoNaoTexto = ['id'];
+
+                // Valida a coluna
         if (!in_array($chave, $colunasPermitidas)) {
             throw new InvalidArgumentException("Coluna inválida para busca: {$chave}");
         }
 
         // Se o valor for numérico, faz uma busca por igualdade exata
-        if (is_numeric($valor)) {
+        if (in_array($chave, $colunasCampoNaoTexto)) {
             $sql = "SELECT * FROM pessoa WHERE {$chave} = :valor ORDER BY {$chave}";
             $stmt = $conn->prepare($sql);
             $stmt->execute([':valor' => $valor]);
@@ -47,12 +49,9 @@ class Pessoa
             $stmt->execute([':valor' => $termoBusca]);
         }
 
-        if ($stmt->rowCount() > 0) {
-            print("<script>alert('Registro(s) encontrado !');</script>");
-        } else {
+        if ($stmt->rowCount() == 0) {
             print("<script>alert('Registro não encontrado !');</script>");
-        }
-        
+        }         
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
         

@@ -89,3 +89,13 @@ form > select {
     border-radius: 4px;
     height: 40px;
 }
+
+/* Botão de envio alinhado no início */
+form > input[type="submit"],
+form > input[type="reset"] {
+    width: 100px;    
+    margin-top: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    height: 40px;
+}

@@ -1,5 +1,5 @@
 <?php
-
+require_once 'classes/Msg.php';
 require_once 'classes/Connection.php';
 require_once 'classes/Pessoa.php';
 require_once 'classes/Cidade.php';
